@@ -1,11 +1,11 @@
 const staticCacheName = 'tms-cache';
 const assets = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/app.js',
-  '/addTask.html',
-  '/main.js',
+  './',
+  './index.html',
+  './style.css',
+  './app.js',
+  './addTask.html',
+  './main.js',
   'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
 ];
 
