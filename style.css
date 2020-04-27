@@ -1,0 +1,89 @@
+
+.header {
+    background: red;
+    color: white;
+    font-family: cursive;
+}
+
+.footer {
+    background: red;
+    color: white;
+    font-family: cursive;
+}
+
+.logo h2 {
+    margin: 9px 33px;
+}
+
+.space-up {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.space-lr {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* .install-div {
+    background: red;
+    color: white;
+}
+
+
+
+
+
+.header {
+    height:20%;
+}
+
+.footer {
+    height:20%;
+}
+
+.main-content {
+    height:80%;
+} */
+
+
+
+/* chnage */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.box .row {
+  border: 1px dotted grey;
+}
+
+.box .row.header {
+  flex: 0 1 auto;
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  */
+}
+
+.box .row.content {
+  flex: 1 1 auto;
+}
+
+.box .row.footer {
+  flex: 0 1 40px;
+  text-align: center;
+}
+
+.footer p {
+    margin: 8px 0px;
+}
