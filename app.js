@@ -1,4 +1,6 @@
-if('serviceWorker' in navigator){
+$(document).ready(function(){
+
+  if('serviceWorker' in navigator){
     navigator.serviceWorker.register('./sw.js')
       .then(reg => console.log())
       
@@ -6,11 +8,11 @@ if('serviceWorker' in navigator){
       
   }
 
-  // let installDiv = document.querySelector('install-div');
-  // installDiv.style.display = 'none';
 
-  var installBtn = document.querySelector(".install");
-  installBtn.style.display = "none";
+  // var installBtn = document.querySelector(".install");
+  // installBtn.style.display = "none";
+
+  $('.install').hide();
 
   let deferredPrompt;
 
@@ -20,12 +22,12 @@ window.addEventListener('beforeinstallprompt', (e) => {
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI notify the user they can install the PWA
-  installBtn.style.display = "inline";
+  $('.install').show();
 });
 
-installBtn.addEventListener('click', (e) => {
+$('.install').click((e) => {
   // Hide the app provided install promotion
-  installBtn.style.display = "none";
+  $('.install').hide();
   // Show the install prompt
   deferredPrompt.prompt();
   // Wait for the user to respond to the prompt
@@ -36,5 +38,21 @@ installBtn.addEventListener('click', (e) => {
       
     }
   })
+});
+// installBtn.addEventListener('click', (e) => {
+//   // Hide the app provided install promotion
+//   installBtn.style.display = "none";
+//   // Show the install prompt
+//   deferredPrompt.prompt();
+//   // Wait for the user to respond to the prompt
+//   deferredPrompt.userChoice.then((choiceResult) => {
+//     if (choiceResult.outcome === 'accepted') {
+      
+//     } else {
+      
+//     }
+//   })
+// });
+
 });
 

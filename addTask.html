@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Task</title>
-    <!-- <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="/style.css">
-    <script src="/main.js"></script> -->
-   
+    <link rel="stylesheet" href="./style.css">
+    <link rel="manifest" href="./manifest.json">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 </head>
-<body>
-    <h1>Add Task</h1>
-   <form onsubmit="addTask()">
-        Name : <input type="text" id="tname">
-        <button type="submit">Add</button>
-   </form>
 
-   <!-- <script src="/app.js"></script> -->
+<body>
+    <!-- changes -->
+    <div class="box">
+        <div class="row header">
+            <div class="container-fluid header">
+                <div class="logo">
+                    <h2>TMS</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row content">
+            <div class="container main-content">
+                <!-- <div class="space-ud">
+                <button class="btn btn-primary">Add Item</button>
+                <button class="btn btn-danger install">Add to home screen</button>
+            </div> -->
+                <div class="space-ud input-style">
+                    <form onsubmit="addTask()">
+                        <div class="form-group">
+                            <h1>Add Task </h1>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Task name</label>
+                            <textarea class="form-control" id="tname" rows="3"></textarea>
+                        </div>
+                        <div class="space-ud">
+                            <button class="btn btn-primary" type="submit">Add</button>
+                            <button class="btn btn-danger" type="reset">Clear</button>
+                            <a class="btn btn-info" href="./index.html">Back</a>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row footer">
+            <p>&copy; Copyright 2020 TMS, All Rights Reserved</p>
+        </div>
+    </div>
 </body>
+
 </html>

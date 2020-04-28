@@ -1,7 +1,7 @@
 {
-    "name": "Zomato",
-    "short_name": "zomato",
-    "start_url": "/index.html",
+    "name": "Tomato",
+    "short_name": "tomato",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#FFE9D2",
     "theme_color": "#337ab7",

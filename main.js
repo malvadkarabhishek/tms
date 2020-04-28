@@ -2,6 +2,11 @@
 // database
 var db  = null;
 
+var taskList = [];
+
+var noDataText = 'No data to display';
+
+
 
 
 // open database
@@ -17,6 +22,7 @@ request.onupgradeneeded = e => {
 // success
 request.onsuccess = e => {
     db = e.target.result;
+    getTasks();
 
 }
 
@@ -26,14 +32,63 @@ request.onerror = e => {
 }
 
 // add tasks
-
 const addTask = () => {
-    let taskname = document.getElementById('tname');
+    let taskName = document.getElementById('tname');
     let task = {
-        name:taskname.value
+        name:taskName.value,
+        status:'Pending'
     };
-    alert('add task called');
     const tx = db.transaction('tasks','readwrite');
     var os = tx.objectStore('tasks');
-    os.add(task);
+    const request = os.add(task);
+    request.onsuccess = (res) => {
+        window.location.href ='./index.html';
+    }
+    request.onerror = (e) => {
+        
+    }
 };
+
+// get all tasks
+
+const getTasks = () => {
+    taskList = [];
+    const tx = db.transaction('tasks','readwrite');
+    var os = tx.objectStore('tasks');
+
+    var request = os.openCursor();
+
+    request.onsuccess = (e) => {
+        let cursor = e.target.result;
+        if (cursor) {
+            let task = cursor.value;
+            taskList.push(task);
+            cursor.continue();
+        } else {
+            console.log(taskList);
+            createTableContent(taskList);
+        }
+    }
+};
+
+const createTableContent = (taskList) => {
+    var html = "";
+    if (taskList && taskList.length) {
+        taskList.forEach(task => {
+            html+="<tr>";
+            html+="<td>"+task.name+"</td>";
+            html+="<td class='text-center'><span class='status'>"+task.status+"</span></td>";
+    
+            html+="</tr>";
+        });
+       
+    } else {
+        html+="<tr>";
+        html+="<td colspan='2' class='text-center''>"+noDataText+"</td>";
+
+        html+="</tr>";
+    }
+    $(".table-content").html(html);
+}
+
+

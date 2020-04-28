@@ -15,14 +15,32 @@
     margin: 9px 33px;
 }
 
-.space-up {
+.space-ud {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.status {
+  background: yellow;
+    padding: 6px 30px;
+}
+
+.table-header-color {
+  background: black;
+    color: white;
 }
 
 .space-lr {
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#tname {
+  width: 50%;
 }
 /* .install-div {
     background: red;
