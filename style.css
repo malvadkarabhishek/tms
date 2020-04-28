@@ -2,13 +2,11 @@
 .header {
     background: red;
     color: white;
-    font-family: cursive;
 }
 
 .footer {
     background: red;
     color: white;
-    font-family: cursive;
 }
 
 .logo h2 {
@@ -23,6 +21,16 @@
 .status {
   background: yellow;
     padding: 6px 30px;
+}
+
+td a {
+  color: black;
+  margin: 0px 4px;
+}
+
+.disable {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .table-header-color {

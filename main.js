@@ -76,15 +76,16 @@ const createTableContent = (taskList) => {
     if (taskList && taskList.length) {
         taskList.forEach(task => {
             html+="<tr>";
-            html+="<td>"+task.name+"</td>";
+            html+="<td class='text-center'>"+task.name+"</td>";
             html+="<td class='text-center'><span class='status'>"+task.status+"</span></td>";
+            html+="<td class='text-center'><a href='#' class='disable'><i class='fa fa-pencil' aria-hidden='true'></i></a>&nbsp;<a href='#' class='disable' aria-disabled='true'><i class='fa fa-trash'></i></a></td>";
     
             html+="</tr>";
-        });
+        })
        
     } else {
         html+="<tr>";
-        html+="<td colspan='2' class='text-center''>"+noDataText+"</td>";
+        html+="<td colspan='3' class='text-center''>"+noDataText+"</td>";
 
         html+="</tr>";
     }
