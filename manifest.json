@@ -1,9 +1,9 @@
 {
-    "name": "Tomato",
-    "short_name": "tomato",
+    "name": "Welcome To Task Management System",
+    "short_name": "TMS",
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#FFE9D2",
+    "background_color": "#008080",
     "theme_color": "#337ab7",
     "orientation": "portrait-primary",
     "icons": [
