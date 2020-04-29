@@ -12,7 +12,7 @@ $(document).ready(function(){
   // var installBtn = document.querySelector(".install");
   // installBtn.style.display = "none";
 
-  $('.install').hide();
+  // $('.install').hide();
 
   let deferredPrompt;
 
