@@ -114,6 +114,7 @@ const createTableContent = (taskList) => {
         html += "<td colspan='3' class='text-center''>" + noDataText + "</td>";
 
         html += "</tr>";
+        $('#delete').hide();
     }
     $(".table-content").html(html);
 }
